@@ -14,8 +14,8 @@ describe('Telemetry Utils', () => {
     const telemetry = createQueryTelemetry(query);
     expect(telemetry.sObject).toEqual('standard');
     expect(telemetry.fields).toEqual(query.fields.length);
-    expect(telemetry.orderBy).toEqual(query.orderBy.length);
-    expect(telemetry.errors).toEqual(query.errors.length);
-    expect(telemetry.unsupported).toEqual(query.unsupported.length);
+    expect(telemetry.orderBy.length).toEqual(query.orderBy.length);
+    expect(telemetry.errors.length).toEqual(query.errors.length);
+    expect(telemetry.unsupported.length).toEqual(query.unsupported.length);
   });
 });

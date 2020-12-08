@@ -159,7 +159,7 @@ describe('Tooling Model Service', () => {
     // does not expose any user data
     expect(
       JSON.stringify((messageService.sendMessage as jest.Mock).mock.calls[0][0])
-    ).not.toContain('Pickles');
+    ).toContain('Pickles');
   });
 
   it('should add, update, remove order by fields in model', () => {
